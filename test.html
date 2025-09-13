@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旋转背景示例</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* 添加背景颜色以便更好地观察 */
+    position: relative; /* 父容器需要定位以便子元素绝对定位 */
+  }
+
+  .index-top-rotate {
+    position: relative; /* 父容器需要定位以便子元素绝对定位 */
+    width: 400px; /* 根据需要调整容器大小 */
+    height: 400px; /* 根据需要调整容器大小 */
+    /* 根据您父元素的transform-origin调整 */
+    transform-origin: 191.146px 191.146px;
+  }
+
+  .index-top-outer,
+  .index-top-inner,
+  .index-top-words {
+    position: absolute; /* 子元素绝对定位 */
+  }
+
+  .index-top-outer {
+    top: 191.146px;
+    left: 191.146px;
+    transform-origin: 191.146px 191.146px;
+    animation: rotate1 20s linear 0s infinite normal none running;
+    width: 382.292px;
+    height: 382.292px;
+    background: rgba(0, 0, 0, 0) url("https://css.ahdahda.com/product/bmny/1/images/0_outer_circle.png?v=1.0.1") no-repeat scroll 0% 0% / 100% padding-box border-box;
+    background-image: url("https://css.ahdahda.com/product/bmny/1/images/0_outer_circle.png?v=1.0.1");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    border: 0px none rgb(51, 51, 51);
+    border-radius: 0px;
+  }
+
+  .index-top-inner {
+    /* 您提供的inner元素的transform-origin，根据需要调整 */
+    transform-origin: 139.943px 139.943px;
+    animation: rotate2 20s linear 0s infinite normal none running; /* 假设有一个rotate2动画 */
+    width: 279.885px;
+    height: 279.885px;
+    background: rgba(0, 0, 0, 0) url("https://css.ahdahda.com/product/bmny/1/images/0_inner_circle.png?v=1.0.1") no-repeat scroll 0% 0% / 100% padding-box border-box;
+    background-image: url("https://css.ahdahda.com/product/bmny/1/images/0_inner_circle.png?v=1.0.1");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    /* 根据需要调整top和left使其相对于父容器正确放置 */
+     top: calc(191.146px - 139.943px); /* 示例：假设inner的中心与outer的中心重合 */
+     left: calc(191.146px - 139.943px); /* 示例：假设inner的中心与outer的中心重合 */
+  }
+
+   .index-top-words {
+    /* 您提供的words元素的transform-origin，根据需要调整 */
+    transform-origin: 110.932px 165.542px;
+    animation: none; /* 根据您提供的样式，words元素没有动画 */
+    width: 221.865px;
+    height: 331.083px;
+    background: rgba(0, 0, 0, 0) url("https://css.ahdahda.com/product/bmny/1/images/0_banner_words.png?v=1.0.1") no-repeat scroll 0% 0% / 100% padding-box border-box;
+    background-image: url("https://css.ahdahda.com/product/bmny/1/images/0_banner_words.png?v=1.0.1");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+     /* 根据需要调整top和left使其相对于父容器正确放置 */
+     top: calc(191.146px - 165.542px); /* 示例：假设words的transform-origin与outer的transform-origin对齐 */
+     left: calc(191.146px - 110.932px); /* 示例：假设words的transform-origin与outer的transform-origin对齐 */
+  }
+
+
+  /* 示例 @keyframes 规则，您需要根据实际的 rotate1 规则进行修改 */
+  @keyframes rotate1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+   /* 示例 @keyframes 规则，用于inner元素，您需要根据实际情况添加 */
+  @keyframes rotate2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg); /* 假设inner元素反向旋转 */
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="index-top-rotate">
+  <p class="index-top-outer"></p>
+  <p class="index-top-inner"></p>
+  <p class="index-top-words"></p>
+</div>
+
+</body>
+</html>

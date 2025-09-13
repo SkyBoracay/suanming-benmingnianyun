@@ -1,0 +1,15 @@
+.main-title,.main-title-bg{height:44px}
+.main-title{background:-moz-linear-gradient(left,#FA4DBE 0,#FBAA58 100%);background:-webkit-gradient(linear,left top,left right,color-stop(0,#FA4DBE),color-stop(100%,#FBAA58));background:-webkit-linear-gradient(left,#FA4DBE 0,#FBAA58 100%);background:-o-linear-gradient(left,#FA4DBE 0,#FBAA58 100%);background:-ms-linear-gradient(left,#FA4DBE 0,#FBAA58 100%);background:linear-gradient(to left,#FA4DBE 0,#FBAA58 100%);border-bottom-color:transparent;padding:8px 10px;position:fixed;top:0;left:0;width:100%;z-index:8;display:block;box-sizing:border-box}
+.main-title .menu-cat{font-family:Simhei;font-size:17px;height:28px;line-height:28px;color:#fff;text-align:center}
+.main-title .menu-cat span{position:relative;cursor:pointer;padding:6px 22px 6px 15px}
+.icon_nav_tab{height:44px;z-index:8;zoom:1;position:fixed;top:44px;width:100%;background:#fff;transform-origin:center;text-align:center;overflow:hidden}
+.icon_nav_tab_bg{height:44px}
+.icon_nav_tab .swiper-container{position:relative;z-index:1;overflow:initial}
+.icon_nav_tab .swiper-wrapper{height:44px;text-align:center;position:relative;z-index:50;zoom:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
+.icon_nav_tab .swiper-slide{position:relative;z-index:5;display:block;width:auto;line-height:44px;margin:auto;overflow:hidden;-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0}
+.icon_nav_tab .swiper-slide a{display:block;position:relative;z-index:1;zoom:1;margin:0 11px;font-size:14px;text-align:center;height:44px;line-height:44px;color:#333;text-decoration:none}
+.icon_nav_tab .swiper-slide.active a{color:#FC3F78;font-weight:600}
+.icon_nav_tab .swiper-slide a:before{content:"";transition:all .4s cubic-bezier(.4,.68,.15,1) 0s;-webkit-transition:all .4s cubic-bezier(.4,.68,.15,1) 0s;display:block;position:absolute;bottom:0;left:50%;width:0}
+.icon_nav_tab .swiper-slide.active a:before{bottom:0;left:0;width:100%;height:3px;border-radius:3px;overflow:hidden;background:#FC3F78}
+.icon_nav_tab.tav_load .load{display:block}.icon_nav_tab.tav_load .swiper-container{margin-right:0}
+.ovh{margin-top:44px}
